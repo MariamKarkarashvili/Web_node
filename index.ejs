@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projection</title>
+
+
+    <% include partials/head_css_import.ejs %>
+  </head>
+  <body>
+    <div class="container" id="container">
+    <!-- Page Content goes here -->
+    <div id="ligne1"class="row">
+      <div class="col <%= affiche.douze%>"><p>s12</p></div>
+    </div>
+
+    <div id="ligne2"class="row">
+      <div class="col <%= affiche.six%>"><p>s12</p></div>
+    </div>
+
+    <div id="ligne3"class="row">
+      <div class="col <%= affiche.trois%>"><p>s12</p></div>
+      <div class="col s12"><p> <%= data.texte%> </p></div>
+
+    </div>
+
+    </div>
+
+    <% include partials/js_import.ejs %>
+    <script>
+      setTimeout(function(){
+        window.location.reload(1);
+      }, 5000);
+
+      var ligne1 = document.getElementById('ligne1');
+      var nombre = 3
+      for (var i = 0; i < nombre;  i++) {
+        ligne1.innerHTML += "<div class=\"col s3\"><p>MAR</p></div>"
+      }
+
+    </script>
+  </body>
+</html>
